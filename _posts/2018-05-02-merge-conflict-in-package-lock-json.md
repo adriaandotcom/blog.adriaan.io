@@ -32,3 +32,6 @@ Or as a oneliner so it does not chain when one command fails
 ```bash
 rm package-lock.json && npm install && git add package-lock.json && git commit
 ```
+
+Do note that this _might_ update your package versions, which is why the `package-lock.json` exists. It's recommended to manually edit the `package.json` file, and run `npm install [--package-lock-only]` again, as per the [docs](https://docs.npmjs.com/files/package-locks#resolving-lockfile-conflicts) 
+
