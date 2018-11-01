@@ -52,7 +52,7 @@ But I like to have a little function that does this for me:
 const get = (object, selector) => {
   try {
     if (typeof object !== 'object') return
-    return eval(`variable.${selector}`)
+    return eval(`object.${selector}`)
   } catch (error) {
     return
   }
