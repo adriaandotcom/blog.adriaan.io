@@ -31,32 +31,13 @@ async function returnSomething(name) { // <--- this line
 }
 ```
 
-I also knew I needed a [`try...catch`-statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), so I added it
-
-```js
-async function returnSomething(name) {
-  return new Promise((resolve, reject) => {
-    try {
-      const somethingElse = await returnSomethingElse();
-      return resolve(somethingElse);
-    } catch(error) {
-      return reject(error);
-    }
-  });
-}
-```
-
 But still no luck, then I realised I didn't have an async function. The arrow function in the `new Promise` is not `async`! So I change the code to this and it worked:
 
 ```js
 function returnSomething(name) {
   return new Promise(async (resolve, reject) => { // <--- this line
-    try {
-      const somethingElse = await returnSomethingElse();
-      return resolve(somethingElse);
-    } catch(error) {
-      return reject(error);
-    }
+    const somethingElse = await returnSomethingElse();
+    return resolve(somethingElse);
   });
 }
 ```
