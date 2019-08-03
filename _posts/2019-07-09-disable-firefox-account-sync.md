@@ -2,7 +2,7 @@
 title: Disable Firefox Account / Sync
 ---
 
-Firefox has a feature where they want you to register for. It's Firefox Account. Sometimes called Firefox Sync. It's something I don't like to do, it's a browsers and it doesn't need to know who I am. That's why I disabled the Firefox Account feature including the button and tab in settings.
+Firefox has a feature where they want you to register for. It's Firefox Account. Sometimes called Firefox Sync. It's something I don't like to do, it's a browser and it doesn't need to know who I am. That's why I disabled the Firefox Account feature including the button and tab in settings.
 
 Here is how:
 
