@@ -2,6 +2,8 @@
 title: End to the endless if's to get a JavaScript value in (nested) objects
 ---
 
+> **UPDATE**: I created [a better blog post](/replacement-for-optional-chaining-of-nested-objects-in-js.html) without the use of `eval`
+
 Sometimes you have to get a variable from a nested object like this
 
 ```js
