@@ -15,7 +15,7 @@ When I setup an NGINX server I have to setup custom error pages for every error.
 First of all you need to create an error_page in your `http`, `server`, or `location` directive ([docs](https://nginx.org/en/docs/http/ngx_http_core_module.html#error_page)), _the `location` block should be part of the `server` directive_:
 
 ```nginx
-error_page 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 421 422 423 424 426 428 429 431 451 500 501 502 503 504 505 506 507 508 510 511 /error.html;
+error_page 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 421 422 423 424 425 426 428 429 431 451 500 501 502 503 504 505 506 507 508 510 511 /error.html;
 
 location = /error.html {
   ssi on;
@@ -79,6 +79,7 @@ map $status $status_text {
   422 'Unprocessable Entity';
   423 'Locked';
   424 'Failed Dependency';
+  425 'Too Early';
   426 'Upgrade Required';
   428 'Precondition Required';
   429 'Too Many Requests';
