@@ -49,13 +49,14 @@ But I like to have a little function that does this for me:
 
 ```js
 // Copy this function
-const get = (object, selector) => {
-  if (typeof object !== 'object' || typeof selector !== 'string') return
-  return selector.replace(/\[/g, '.[').split('.').reduce((prev, curr) => {
-    if (prev === undefined) return prev
+const get = (object, selector, defaultValue = undefined) => {
+  if (typeof object !== 'object' || object === null || typeof selector !== 'string') return defaultValue
+  const value = selector.replace(/\[/g, '.[').split('.').reduce((prev, curr) => {
+    if ([undefined, null].indexOf(prev) > -1) return undefined
     if (curr.startsWith('[')) return prev[curr.slice(1, -1)]
     else return prev[curr]
   }, object)
+  return (value === undefined) ? defaultValue : value
 }
 
 // So you can do
