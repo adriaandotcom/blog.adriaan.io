@@ -13,16 +13,18 @@
     
     <script src="/public/lib/pjax.min.js"></script>
     <script>
-      if (typeof Pjax === 'undefined') return;
+      (function() {
+        if (typeof Pjax === 'undefined') return;
 
-      var pjax = new Pjax({
-        cacheBust: false,
-        selectors: [
-          "title",
-          "meta[name=description]",
-          ".content.container",
-        ]
-      })
+        var pjax = new Pjax({
+          cacheBust: false,
+          selectors: [
+            "title",
+            "meta[name=description]",
+            ".content.container",
+          ]
+        })
+      })()
     </script>
     
     <!--
