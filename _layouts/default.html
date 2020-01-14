@@ -16,6 +16,7 @@
       if (typeof Pjax === 'undefined') return;
 
       var pjax = new Pjax({
+        cacheBust: false,
         selectors: [
           "title",
           "meta[name=description]",
