@@ -11,6 +11,18 @@
       {{ content }}
     </div>
     
+    <script>
+      if (typeof Pjax === 'undefined') return;
+
+      var pjax = new Pjax({
+        selectors: [
+          "title",
+          "meta[name=description]",
+          ".content.container",
+        ]
+      })
+    </script>
+    
     <!--
       Simple Analytics
       The analytics tool that doesn't track you.
