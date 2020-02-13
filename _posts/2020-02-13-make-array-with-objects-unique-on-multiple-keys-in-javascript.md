@@ -39,7 +39,11 @@ const makeUnique = (array = [], keys = []) => {
     return list;
   }, []);
 };
+```
 
+You can use it like this:
+
+```js
 makeUnique(browsers, ["os", "os_version"]);
 ```
 
