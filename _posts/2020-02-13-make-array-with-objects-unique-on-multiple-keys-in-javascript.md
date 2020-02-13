@@ -5,24 +5,26 @@ title: Make array with objects unique on multiple keys in javascript
 Let's say you have an array with objects:
 
 ```js
-const browsers = {
-  os: 'OS X',
-  os_version: 'Catalina',
-  browser: 'chrome',
-  browser_version: '30.0'
-},
-{
-  os: 'Windows',
-  os_version: '7',
-  browser: 'chrome',
-  browser_version: '50.0'
-},
-{
-  os: 'Windows',
-  os_version: '7',
-  browser: 'chrome',
-  browser_version: '40.0'
-}
+const browsers = [
+  {
+    os: "OS X",
+    os_version: "Catalina",
+    browser: "chrome",
+    browser_version: "30.0"
+  },
+  {
+    os: "Windows",
+    os_version: "7",
+    browser: "chrome",
+    browser_version: "40.0"
+  },
+  {
+    os: "Windows",
+    os_version: "7",
+    browser: "chrome",
+    browser_version: "50.0"
+  }
+];
 ```
 
 Let's assume you only want to have browsers with unique `os` and `os_version`. Returning the first 2 browsers.
@@ -43,6 +45,8 @@ const makeUnique = (array = [], keys = []) => {
 };
 ```
 
+It returns the first match it finds, so in this case `browser_version: '40.0'` instead of `browser_version: '50.0'`.
+
 You can use it like this:
 
 ```js
@@ -53,16 +57,18 @@ It will return something like this:
 
 
 ```js
-{
-  os: 'OS X',
-  os_version: 'Catalina',
-  browser: 'chrome',
-  browser_version: '30.0'
-},
-{
-  os: 'Windows',
-  os_version: '7',
-  browser: 'chrome',
-  browser_version: '40.0'
-}
+[
+  {
+    os: 'OS X',
+    os_version: 'Catalina',
+    browser: 'chrome',
+    browser_version: '30.0'
+  },
+  {
+    os: 'Windows',
+    os_version: '7',
+    browser: 'chrome',
+    browser_version: '40.0'
+  }
+]
 ```
