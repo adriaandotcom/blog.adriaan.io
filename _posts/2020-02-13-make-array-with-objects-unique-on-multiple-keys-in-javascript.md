@@ -5,7 +5,7 @@ title: Make array with objects unique on multiple keys in javascript
 Let's say you have an array with objects:
 
 ```js
-{
+const browsers = {
   os: 'OS X',
   os_version: 'Catalina',
   browser: 'chrome',
@@ -39,6 +39,8 @@ const makeUnique = (array = [], keys = []) => {
     return list;
   }, []);
 };
+
+makeUnique(browsers, ["os", "os_version"]);
 ```
 
 It will return something like this:
