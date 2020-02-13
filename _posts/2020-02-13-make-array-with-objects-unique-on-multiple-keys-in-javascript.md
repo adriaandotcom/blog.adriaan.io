@@ -25,7 +25,9 @@ const browsers = {
 }
 ```
 
-If you want to make this array unique you can use this function:
+Let's assume you only want to have browsers with unique `os` and `os_version`. Returning the first 2 browsers.
+
+If you want to make this `browsers` array unique you can use this function:
 
 ```js
 const makeUnique = (array = [], keys = []) => {
