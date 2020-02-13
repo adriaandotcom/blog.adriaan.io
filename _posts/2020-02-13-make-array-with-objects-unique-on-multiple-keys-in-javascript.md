@@ -10,10 +10,10 @@ Let's say you have an array with objects:
   os_version: 'Catalina',
   browser: 'chrome',
   browser_version: '30.0'
-}
+},
 {
   os: 'Windows',
-  os_version: '10',
+  os_version: '7',
   browser: 'chrome',
   browser_version: '50.0'
 },
@@ -23,7 +23,7 @@ Let's say you have an array with objects:
   browser: 'chrome',
   browser_version: '40.0'
 }
-````
+```
 
 If you want to make this array unique you can use this function:
 
@@ -39,4 +39,22 @@ const makeUnique = (array = [], keys = []) => {
     return list;
   }, []);
 };
+```
+
+It will return something like this:
+
+
+```js
+{
+  os: 'OS X',
+  os_version: 'Catalina',
+  browser: 'chrome',
+  browser_version: '30.0'
+},
+{
+  os: 'Windows',
+  os_version: '7',
+  browser: 'chrome',
+  browser_version: '40.0'
+}
 ```
