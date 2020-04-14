@@ -1,28 +1,29 @@
 # Permalinks
-permalink:        '/:title.html'
+permalink: "/:title.html"
 
 # Setup
-title:            "Adriaan's blog"
-tagline:          "Adriaan's coding blog"
-description:      'Just learnings, no bullshit'
-url:              https://blog.adriaan.io
-baseurl:          /
-disqus_shortname: demaandvanadriaan
+title: "Adriaan's blog"
+tagline: "Adriaan's coding blog"
+description: "Just learnings, no bullshit"
+url: https://blog.adriaan.io
+baseurl: /
+theme: null
 
 author:
-  name:           'Adriaan van Rossum'
-  url:            https://twitter.com/adriaanvrossum
+  name: "Adriaan van Rossum"
+  url: https://twitter.com/adriaanvrossum
 
-paginate:         50
+paginate: 50
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: "post"
       is_post: true
 
-gems:
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-redirect-from
