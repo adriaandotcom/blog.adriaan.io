@@ -45,3 +45,11 @@
   color: white;
   text-decoration: underline;
 }
+
+.shadow {
+  box-shadow: #b9b9b9 3px 3px 10px, #aeaeae 0px 0px 2px;
+}
+
+h2 {
+  margin-top: 2rem;
+}
