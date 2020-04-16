@@ -2,9 +2,11 @@
 title: Install Ubuntu Server 18.04.4 on encrypted disks with RAID 1, GRUB, and legacy BIOS
 ---
 
-In this guide I explain how to install Ubuntu Server 18.04.4 on a (bare metal) server with two disk in RAID 1 mode. You will loose all data on your server if you follow this guide. I will use a **full disk encryption** with [md-crypt](https://en.wikipedia.org/wiki/Dm-crypt). My hosting provider does not support EUFI so I used **legacy BIOS** to run the server. This means you can't use disks larger than x TB. We will not use LUKS as it's another layer of complexity to the server.
+In this guide I explain how to install Ubuntu Server 18.04.4 on a (bare metal) server with two disk in RAID 1 mode. You will **loose all data** on your server if you follow this guide. I will use a **full disk encryption** with [md-crypt](https://en.wikipedia.org/wiki/Dm-crypt). My hosting provider does not support EUFI so I used **legacy BIOS** to run the server. This means you can't use disks larger than x TB. We will not use LUKS as it's another layer of complexity to the server.
 
 > Disclaimer: I'm not a server expert. I installed a few bare metal servers in my life. The biggest reason for this guide is to use it myself for my next server install. I couldn't find a good guide on installing Ubuntu Server with encrypted disks in RAID mode so I grabbed information from all around the internet. Please be careful when using this guide yourself.
+
+Before you start it's wise to check if our requirements align. In this guide we encrypt the disks as much as possible. This means that **you need to enter a password on boot**. You can use tools like [Mandos](https://www.recompile.se/mandos), a system for allowing servers with encrypted root file systems to reboot unattended and/or remotely. I prefer Dropbear, a very small SSH program, that you can run via the initial ramdisk (initramfs). This means we are able to allow external connections via SSH before you need to enter your encryption password. By following this guide you will **delete all data** on your server. We also use legacy BIOS, change the steps I took (eg. BIOS boot partition) for legacy BIOS into something else if needed.
 
 ## Download the correct ISO image
 
