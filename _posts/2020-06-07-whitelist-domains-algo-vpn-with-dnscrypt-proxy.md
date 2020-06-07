@@ -8,20 +8,20 @@ title: Allow (whitelist) domains with Algo VPN in DNSCrypt Proxy
 
 First navigate to your DNSCrypt settings:
 
-```
+```bash
 cd /etc/dnscrypt-proxy
 ls -la
 ```
 
 You will find a file in there called `dnscrypt-proxy.toml`, open this file:
 
-```
+```bash
 sudo vi dnscrypt-proxy.toml
 ```
 
 It's a very long file so search for `whitelist` by hitting the <kbd>/</kbd> key. Type `whitelist` and hit <kbd>enter</kbd>. You will see the first hit of whitelist, use <kbd>n</kbd> to navigate to this line:
 
-```
+```bash
 # whitelist_file = 'whitelist.txt'
 ```
 
@@ -31,7 +31,7 @@ Remove the `# ` before `whitelist_file`. In vim you can do this by hitting <kbd>
 
 Now DNSCrypt will look for a `whitelist.txt` file in this folder `/etc/dnscrypt-proxy`. Create this file now:
 
-```
+```bash
 sudo touch /etc/dnscrypt-proxy/whitelist.txt
 sudo vi /etc/dnscrypt-proxy/whitelist.txt
 ```
@@ -46,7 +46,7 @@ Once you're done you hit <kbd>esc</kbd> and type `:wq` <kbd>enter</kbd>.
 
 You now created a list which will allow certain domains to bypass your blocklist. We now need to restart DNSCrypt:
 
-```
+```bash
 sudo service dnscrypt-proxy restart
 ```
 
