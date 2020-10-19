@@ -35,9 +35,16 @@ But still no luck, then I realised I didn't have an async function. The arrow fu
 
 ```js
 function returnSomething(name) {
-  return new Promise(async (resolve, reject) => { // <--- this line
-    const somethingElse = await returnSomethingElse();
-    return resolve(somethingElse);
+  return new Promise((resolve, reject) => {
+    (async () => {
+      try {
+        const somethingElse = await returnSomethingElse();
+        resolve(somethingElse);
+      } catch (err) {
+        reject(err);
+      }
+    })();
   });
+}
 }
 ```
