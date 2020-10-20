@@ -41,3 +41,27 @@ function returnSomething(name) {
   });
 }
 ```
+
+But now we have an `async` function with a Promise inside of it which is `async`. That seems like a bit much, don't you think?
+
+Let's clean this up a bit. Because the function is already `async` we can use Promised inside it already. No need for `new Promise`.
+
+```js
+async function returnSomething(name) {
+  const somethingElse = await returnSomethingElse();
+  return resolve(somethingElse);
+}
+```
+
+If `returnSomethingElse` rejects, we will catch the error in the parent function of `returnSomething`:
+
+```js
+(async () => {
+  try {
+    const something = await returnSomething();
+    console.log(something);
+  } catch (e) {
+    console.error(e);
+  }
+})();
+```
