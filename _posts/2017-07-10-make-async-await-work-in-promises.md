@@ -42,9 +42,9 @@ function returnSomething(name) {
 }
 ```
 
-But now we have an `async` function with a Promise inside of it which is `async`. That seems like a bit much, don't you think?
+But now we have a function with a Promise inside of it which is `async`. That seems like a bit much, don't you think?
 
-Let's clean this up a bit. Because the function is already `async` we can use Promised inside it already. No need for `new Promise`.
+Let's clean this up a bit. Because the function is already `async` it means it's behaving like a Promise. No need for `new Promise` inside of the function.
 
 ```js
 async function returnSomething(name) {
