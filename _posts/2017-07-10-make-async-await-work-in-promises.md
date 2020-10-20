@@ -49,7 +49,7 @@ Let's clean this up a bit. Because the function is already `async` it means it's
 ```js
 async function returnSomething(name) {
   const somethingElse = await returnSomethingElse();
-  return resolve(somethingElse);
+  return somethingElse;
 }
 ```
 
