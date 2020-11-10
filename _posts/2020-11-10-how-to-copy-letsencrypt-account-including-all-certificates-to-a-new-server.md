@@ -1,5 +1,5 @@
 ---
-title: How to copy the letsencrypt account to a new server including all certificates
+title: How to copy the Let's Encrypt account including all certificates to a new server 
 layout: post
 ---
 
