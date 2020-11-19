@@ -53,7 +53,7 @@ Or when you want to make the array unique by city (which is nested):
 
 
 ```js
-const compage = (left, right) => left.address.city == right.address.city
+const compare = (left, right) => left.address.city == right.address.city
 unique(array, compare)
 
 // [
