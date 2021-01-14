@@ -7,7 +7,7 @@ layout: post
 
 Let's say you have an app that looks like this:
 
-```html
+```vue
 <div id="app">
   <p><button @click="openBox">Toggle</button></p>
   <div v-if="open">
@@ -41,7 +41,7 @@ Because the element is not rendered in the DOM yet.
 
 You can solve it by using the `$nextTick` function:
 
-```html
+```vue
 <div id="app">
   <p><button @click="openBox">Toggle</button></p>
   <div v-if="open">
