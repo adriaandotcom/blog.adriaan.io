@@ -1,5 +1,5 @@
 ---
-title: Vue 2: this.$refs is undefined under v-if portion
+title: "Vue 2: this.$refs is undefined under v-if portion"
 layout: post
 ---
 
