@@ -9,9 +9,9 @@ When I am on a network that's paid by the hour you want to disable your Wi-Fi wh
 2. I have my scripts living in `~/Developer/scripts` (create that folder with `mkdir -p ~/Developer/scripts`)
 3. Create a script at `~/Developer/scripts/sleepscript.sh`:
 
-    ```sh
-    networksetup -setairportpower Wi-Fi off
-    ```
+   ```sh
+   networksetup -setairportpower Wi-Fi off
+   ```
 
 4. Make your script excutable in your Terminal with `chmod +x ~/Developer/scripts/sleepscript.sh`
 5. Test your script with `/usr/local/sbin/sleepwatcher --verbose --sleep ~/Developer/scripts/sleepscript.sh --wakeup /path/to/your/wakeupscript`
