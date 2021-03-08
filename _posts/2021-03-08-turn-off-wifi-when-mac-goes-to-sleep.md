@@ -17,33 +17,34 @@ When I am on a network that's paid by the hour you want to disable your Wi-Fi wh
 5. Test your script with `/usr/local/sbin/sleepwatcher --verbose --sleep ~/Developer/scripts/sleepscript.sh --wakeup /path/to/your/wakeupscript`
 6. Create a Launch Agent at `~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist`:
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>Label</key>
-      <string>de.bernhard-baehr.sleepwatcher</string>
-      <key>ProgramArguments</key>
-      <array>
-        <string>/usr/local/sbin/sleepwatcher</string>
-        <string>-V</string>
-        <string>-s ~/Developer/scripts/sleepscript.sh</string>
-      </array>
-      <key>RunAtLoad</key>
-      <true/>
-      <key>KeepAlive</key>
-      <true/>
-            <key>StandardOutPath</key>
-            <string>~/Developer/scripts/sleepscript-output.log</string>
-            <key>StandardErrorPath</key>
-            <string>~/Developer/scripts/sleepscript-errors.log</string>
-    </dict>
-    </plist>
-    ```
-    Just save it to `~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist`
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+     <key>Label</key>
+     <string>de.bernhard-baehr.sleepwatcher</string>
+     <key>ProgramArguments</key>
+     <array>
+       <string>/usr/local/sbin/sleepwatcher</string>
+       <string>-V</string>
+       <string>-s ~/Developer/scripts/sleepscript.sh</string>
+     </array>
+     <key>RunAtLoad</key>
+     <true/>
+     <key>KeepAlive</key>
+     <true/>
+     <key>StandardOutPath</key>
+     <string>~/Developer/scripts/sleepscript-output.log</string>
+     <key>StandardErrorPath</key>
+     <string>~/Developer/scripts/sleepscript-errors.log</string>
+   </dict>
+   </plist>
+   ```
     
-    > Don't change `-s` to `--sleep` because somehow that didn't work.
+   Just save it to `~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist`
+    
+   > Don't change `-s` to `--sleep` because somehow that didn't work.
 
 1. Enable and start the Launch Agent `launchctl load -w ~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist`
 2. Test is while putting your mac to sleep. No luck? Check your logs in `~/Developer/scripts/`
