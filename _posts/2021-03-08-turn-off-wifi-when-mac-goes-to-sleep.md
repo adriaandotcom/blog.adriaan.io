@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Turn of Wi-Fi when macOS goes to sleep
+layout: post
 ---
 
 When I am on a network that's paid by the hour you want to disable your Wi-Fi when you are not using your mac. To do this I listen for when the mac goes to sleep and disable the Wi-Fi. 
