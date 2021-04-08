@@ -1,5 +1,5 @@
 ---
-title: Turn of Wi-Fi when macOS goes to sleep
+title: Turn off Wi-Fi when macOS goes to sleep
 layout: post
 ---
 
