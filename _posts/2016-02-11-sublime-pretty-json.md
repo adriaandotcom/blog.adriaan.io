@@ -9,4 +9,4 @@ Install this packages via `CMD` + `SHIFT` + `P` > `Install package` > Search for
 
 And then turn ugly json via `CMD` + `CTRL` + `J` (OSX) `CTRL` + `ALT` + `J` (Windows/Linux) in pretty JSON!
 
-Source is on [GitHub](https://github.com/dzhibas/SublimePrettyJson).
+This package is written by [Nikolajus Krauklis](https://github.com/dzhibas) and available on [GitHub](https://github.com/dzhibas/SublimePrettyJson).
