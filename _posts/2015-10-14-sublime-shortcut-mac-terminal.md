@@ -16,6 +16,7 @@ For Sublime Text 2 it is
 # Sublime Text alias
 alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 ```
+Restart terminal for changes to reflect
 
 Now you can type (without the `$` of course)
 
