@@ -14,7 +14,7 @@ title: Analytics
   data-visitors-color="#75b5aa"
 ></div>
 
-<p style="margin-top: 0.5rem; font-size: 80%;">Provided by <a href="https://simpleanalytics.io/?ref=blog.adriaan.io">Simple Analytics</a> - Simple, clean, and privacy-friendly analytics.</p>
+<p style="margin-top: 0.5rem; font-size: 80%;">Provided by <a href="https://simpleanalytics.com/?utm_source=blog.adriaan.io">Simple Analytics</a> - Simple, clean, and privacy-friendly analytics.</p>
 
 <script
   async
