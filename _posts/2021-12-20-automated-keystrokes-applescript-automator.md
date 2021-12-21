@@ -11,16 +11,16 @@ Create an AppleScript with this code:
 
 ```applescript
 on run {input, parameters}
-	delay 5
-	
-	tell application "System Events"
-		repeat with charOfInput in (characters of (input as text))
-			keystroke (charOfInput as text)
-			delay 0.1
-		end repeat
-	end tell
-	
-	return input
+  delay 5
+
+  tell application "System Events"
+    repeat with charOfInput in (characters of (input as text))
+      keystroke (charOfInput as text)
+      delay 0.1
+    end repeat
+  end tell
+
+  return input
 end run
 ```
 
