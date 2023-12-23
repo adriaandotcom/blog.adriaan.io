@@ -24,3 +24,5 @@ sudo iptables -I DOCKER-USER -s 1.2.3.4 -j DROP
 ```
 
 After executing the above command, iptables will begin blocking traffic originating from the IP address `1.2.3.4`.
+
+> It's important that this DROP row is above other rows in iptables.
