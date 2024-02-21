@@ -32,6 +32,18 @@ on run {input, parameters}
 end run
 ```
 
-The final result can look like this:
+I created an app called Paste Keystrokes, the final result can look like this:
 
 <img width="616" alt="image" src="https://user-images.githubusercontent.com/1079135/146840130-4d4a9874-88e7-4f7e-afd5-07def3edc15d.png">
+
+## App not allowed to send keystrokes
+
+If you get issues like thiis:
+
+The action “Run AppleScript” encountered an error: “System Events got an error: Paste Keystrokes is not allowed to send keystrokes.
+
+1. Go to System Preferences > Privacy & Security > Accessibility
+2. Remove your app if listed there
+3. Re-add your app to the list
+
+![2024-02-21-11h39-screenshot@2x](https://github.com/adriaandotcom/blog.adriaan.io/assets/1079135/81a7303c-23ad-49e5-98eb-b38272cade8d)
