@@ -13,12 +13,20 @@ Create an AppleScript with this code:
 on run {input, parameters}
   delay 5
 
-  tell application "System Events"
-    repeat with charOfInput in (characters of (input as text))
-      keystroke (charOfInput as text)
-      delay 0.1
-    end repeat
-  end tell
+	tell application "System Events"
+		repeat with charOfInput in (characters of (input as text))
+			set asciiValue to ASCII number of charOfInput
+			-- Check if ASCII value is in the range of uppercase letters (65-90)
+			if asciiValue ≥ 65 and asciiValue ≤ 90 then
+				key down shift
+				keystroke charOfInput
+				key up shift
+			else
+				keystroke charOfInput
+			end if
+			delay 0.1
+		end repeat
+	end tell
 
   return input
 end run
