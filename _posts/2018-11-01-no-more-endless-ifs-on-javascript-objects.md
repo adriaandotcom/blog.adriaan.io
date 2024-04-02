@@ -64,6 +64,6 @@ const get = (object, selector) => {
 const { last4 } = get(customer, 'sources.data[0]')
 ```
 
-There is a relevant [proposal by tc39](https://github.com/tc39/proposal-optional-chaining) (thanks [@TehShrike](https://twitter.com/TehShrike/status/1058093341861179393)).
+There is a relevant [proposal by tc39](https://github.com/tc39/proposal-optional-chaining) (thanks [@TehShrike](https://x.com/TehShrike/status/1058093341861179393)).
 
 > Inspired by the Ember [`get`-function](https://emberjs.com/api/ember/3.5/functions/@ember%2Fobject/get)
