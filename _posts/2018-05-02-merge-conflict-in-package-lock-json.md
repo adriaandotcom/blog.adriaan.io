@@ -9,7 +9,7 @@ $ git pull origin develop
 remote: Counting objects: 14, done.
 remote: Total 14 (delta 6), reused 6 (delta 6), pack-reused 8
 Unpacking objects: 100% (14/14), done.
-From github.com:adriaanvanrossum/feature/something-really-awesome
+From github.com:adriaandotcom/feature/something-really-awesome
  * branch            develop    -> FETCH_HEAD
    41a55e3..575f291  develop    -> origin/develop
 Auto-merging package.json
@@ -51,4 +51,4 @@ If you care about this, use the following way.
 
 Source: [stackoverflow.com/.../deleting-package-lock-json-to-resolve-conflicts-quickly](https://stackoverflow.com/questions/54124033/deleting-package-lock-json-to-resolve-conflicts-quickly/54127283).
 
-Thanks to [@qwen-3108 (comment)](https://github.com/adriaanvanrossum/blog.adriaan.io/issues/22#issuecomment-997697156) for pointing this out in the comments.
+Thanks to [@qwen-3108 (comment)](https://github.com/adriaandotcom/blog.adriaan.io/issues/22#issuecomment-997697156) for pointing this out in the comments.
