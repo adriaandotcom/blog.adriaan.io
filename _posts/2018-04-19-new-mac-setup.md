@@ -2,7 +2,7 @@
 title: What I do when I setup my new Mac
 ---
 
-When I install my new Mac I do a few things to set it to my needs. Maybe you like those apps and settings and can use it as well. If I need more essentials, hit my up [on Twitter](https://twitter.com/adriaanvrossum).
+When I install my new Mac I do a few things to set it to my needs. Maybe you like those apps and settings and can use it as well. If I need more essentials, hit my up [on X](https://x.com/adriaandotcom).
 
 ## Install
 
