@@ -3,7 +3,7 @@ title: How to set up Chatwoot with Migadu
 layout: post
 ---
 
-If you're self-hosting [Chatwoot](https://www.chatwoot.com/) and want to send emails using [Migadu](https://migadu.com/), here’s a quick guide. This helps you send out conversations, replies, and notifications from your own domain.
+If you're self-hosting [Chatwoot](https://www.chatwoot.com/) and want to send emails using [Migadu](https://migadu.com/), here’s a quick guide. This helps you send out invite emails, password recovery emails, etc. To use it for email conversations, you can set up an inbox in Chatwoot. No need for these environment variables.
 
 Update your `.env` file with the following SMTP settings. Replace all instances of `example.com` with your own domain:
 
